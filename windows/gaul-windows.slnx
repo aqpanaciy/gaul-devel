@@ -2,5 +2,7 @@
   <Configurations>
     <Platform Name="Win32" />
   </Configurations>
+  <Project Path="example-all5s/example-all5s.vcxproj" Id="931a93cb-3579-4580-96c4-232ad12e7a2d" />
+  <Project Path="example-all5s_allele_ranges/example-all5s_allele_ranges.vcxproj" Id="43328193-ce77-46c1-88ce-5bdaea6dd878" />
   <Project Path="gaul-windows.vcxproj" Id="836a7564-6410-4a7a-ac11-71242feceafb" />
 </Solution>
