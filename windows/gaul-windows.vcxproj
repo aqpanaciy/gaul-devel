@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>18.0</VCProjectVersion>
+    <ProjectGuid>{836A7564-6410-4A7A-AC11-71242FECEAFB}</ProjectGuid>
+    <RootNamespace>gaul-windows</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v145</PlatformToolset>
+    <CLRSupport>false</CLRSupport>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>18.0.11925.146</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>Debug\</OutDir>
+    <IntDir>Debug\</IntDir>
+    <LinkIncremental />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>Release\</OutDir>
+    <IntDir>Release\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.\src;..\src;.\util;..\util;.\src\gaul;.\util\gaul;..\src\gaul;..\util\gaul;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;GAULWINDOWS_EXPORTS;BUILDING_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ExceptionHandling />
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <OpenMPSupport>false</OpenMPSupport>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AssemblyDebug>true</AssemblyDebug>
+      <SubSystem>Windows</SubSystem>
+      <LinkTimeCodeGeneration />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\src;..\src;.\util;..\util;.\src\gaul;.\util\gaul;..\src\gaul;..\util\gaul;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;GAULWINDOWS_EXPORTS;BUILDING_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling />
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\gaul.h" />
+    <ClInclude Include="..\src\gaul\ga_bitstring.h" />
+    <ClInclude Include="..\src\gaul\ga_chromo.h" />
+    <ClInclude Include="..\src\gaul\ga_climbing.h" />
+    <ClInclude Include="..\src\gaul\ga_core.h" />
+    <ClInclude Include="..\src\gaul\ga_de.h" />
+    <ClInclude Include="..\src\gaul\ga_deterministiccrowding.h" />
+    <ClInclude Include="..\src\gaul\ga_gradient.h" />
+    <ClInclude Include="..\src\gaul\ga_intrinsics.h" />
+    <ClInclude Include="..\src\gaul\ga_optim.h" />
+    <ClInclude Include="..\src\gaul\ga_qsort.h" />
+    <ClInclude Include="..\src\gaul\ga_randomsearch.h" />
+    <ClInclude Include="..\src\gaul\ga_sa.h" />
+    <ClInclude Include="..\src\gaul\ga_search.h" />
+    <ClInclude Include="..\src\gaul\ga_similarity.h" />
+    <ClInclude Include="..\src\gaul\ga_simplex.h" />
+    <ClInclude Include="..\src\gaul\ga_systematicsearch.h" />
+    <ClInclude Include="..\src\gaul\ga_tabu.h" />
+    <ClInclude Include="..\util\gaul\avltree.h" />
+    <ClInclude Include="..\util\gaul\compatibility.h" />
+    <ClInclude Include="..\util\gaul\gaul_config.h" />
+    <ClInclude Include="..\util\gaul\gaul_config_win.h" />
+    <ClInclude Include="..\util\gaul\gaul_util.h" />
+    <ClInclude Include="..\util\gaul\linkedlist.h" />
+    <ClInclude Include="..\util\gaul\log_util.h" />
+    <ClInclude Include="..\util\gaul\memory_chunks.h" />
+    <ClInclude Include="..\util\gaul\memory_util.h" />
+    <ClInclude Include="..\util\gaul\nn_util.h" />
+    <ClInclude Include="..\util\gaul\random_util.h" />
+    <ClInclude Include="..\util\gaul\table_util.h" />
+    <ClInclude Include="..\util\gaul\timer_util.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\ga_bitstring.c" />
+    <ClCompile Include="..\src\ga_chromo.c" />
+    <ClCompile Include="..\src\ga_climbing.c" />
+    <ClCompile Include="..\src\ga_compare.c" />
+    <ClCompile Include="..\src\ga_core.c" />
+    <ClCompile Include="..\src\ga_crossover.c" />
+    <ClCompile Include="..\src\ga_de.c" />
+    <ClCompile Include="..\src\ga_deterministiccrowding.c" />
+    <ClCompile Include="..\src\ga_gradient.c" />
+    <ClCompile Include="..\src\ga_intrinsics.c" />
+    <ClCompile Include="..\src\ga_io.c" />
+    <ClCompile Include="..\src\ga_mutate.c" />
+    <ClCompile Include="..\src\ga_optim.c" />
+    <ClCompile Include="..\src\ga_qsort.c" />
+    <ClCompile Include="..\src\ga_randomsearch.c" />
+    <ClCompile Include="..\src\ga_rank.c" />
+    <ClCompile Include="..\src\ga_replace.c" />
+    <ClCompile Include="..\src\ga_sa.c" />
+    <ClCompile Include="..\src\ga_seed.c" />
+    <ClCompile Include="..\src\ga_select.c" />
+    <ClCompile Include="..\src\ga_similarity.c" />
+    <ClCompile Include="..\src\ga_simplex.c" />
+    <ClCompile Include="..\src\ga_stats.c" />
+    <ClCompile Include="..\src\ga_systematicsearch.c" />
+    <ClCompile Include="..\src\ga_tabu.c" />
+    <ClCompile Include="..\src\ga_utility.c" />
+    <ClCompile Include="..\util\avltree.c" />
+    <ClCompile Include="..\util\compatibility.c" />
+    <ClCompile Include="..\util\linkedlist.c" />
+    <ClCompile Include="..\util\log_util.c" />
+    <ClCompile Include="..\util\memory_chunks.c" />
+    <ClCompile Include="..\util\memory_util.c" />
+    <ClCompile Include="..\util\nn_util.c" />
+    <ClCompile Include="..\util\random_util.c" />
+    <ClCompile Include="..\util\table_util.c" />
+    <ClCompile Include="..\util\timer_util.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
