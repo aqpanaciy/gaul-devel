@@ -62,8 +62,14 @@
  * This section should be used for MS VC++.
  */
 #  include <time.h>
-#  define vsnprintf _vsnprintf
-#  define snprintf _snprintf
+#  if _MSC_VER >= 1800
+#       define HAVE_STDBOOL_H 1
+#       define HAVE__BOOL 1
+#  endif
+#  if _MSC_VER < 1900
+#       define snprintf _snprintf
+#       define snprintf _snprintf
+#  endif
 #  include <crtdbg.h>
 
 #else
